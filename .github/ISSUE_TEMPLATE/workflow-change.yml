@@ -1,0 +1,22 @@
+name: Workflow change
+description: Propose a change to tooling, CI, process, or repo policy
+title: "[Workflow]: "
+labels: ["workflow"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Requested change
+    validations:
+      required: true
+  - type: textarea
+    id: adr
+    attributes:
+      label: ADR impact
+      description: Note the ADR to add or update.

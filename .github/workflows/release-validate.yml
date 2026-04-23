@@ -1,0 +1,26 @@
+name: release-policy
+
+on:
+  push:
+    branches:
+      - "release/**"
+      - "hotfix/**"
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  release-policy:
+    name: release-policy
+    runs-on: ubuntu-latest
+    if: startsWith(github.head_ref, 'release/') || startsWith(github.head_ref, 'hotfix/') || startsWith(github.ref_name, 'release/') || startsWith(github.ref_name, 'hotfix/')
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate release artifacts
+        env:
+          GITHUB_HEAD_REF: ${{ github.head_ref }}
+        run: ./scripts/validate-release-artifacts.sh

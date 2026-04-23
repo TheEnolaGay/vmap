@@ -1,0 +1,13 @@
+html {
+  font-size: 16px;
+  background: #0b0b0b;
+}
+
+body,
+#root {
+  min-height: 100vh;
+}
+
+#root {
+  min-width: 320px;
+}

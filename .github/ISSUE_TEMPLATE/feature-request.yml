@@ -1,0 +1,22 @@
+name: Feature request
+description: Propose a user-facing capability
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations:
+      required: true
+  - type: textarea
+    id: docs
+    attributes:
+      label: Docs impact
+      description: Note which docs or ADRs will need updates.
