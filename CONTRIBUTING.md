@@ -17,6 +17,7 @@ Merge rules:
 - release branches merge into `main` and back into `develop`
 - hotfix branches merge into `main` and back into `develop`
 - direct pushes to `main` and `develop` are forbidden once branch protections are enabled
+- local hooks also block direct commits and pushes from `main`, `master`, and `develop`
 
 ## Required Local Setup
 
@@ -27,6 +28,13 @@ make bootstrap
 ```
 
 This installs frontend tooling, downloads Go modules, and configures `.githooks/` as the active hook directory.
+
+Local hooks enforce:
+
+- branch naming
+- protected-branch local guards
+- formatting, lint, and docs checks on commit
+- full `make verify` on push
 
 ## Required Validation
 

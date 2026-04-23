@@ -13,6 +13,7 @@ The repository adopts:
 
 - full GitFlow with `main` and `develop`
 - local hooks managed through `.githooks/`
+- local protected-branch guards for `main`, `master`, and `develop`
 - shared validation entrypoints in `Makefile`
 - mandatory backend tests, frontend tests, linting, formatting, and docs policy checks
 - GitHub pull request templates, issue templates, CODEOWNERS, and CI workflows

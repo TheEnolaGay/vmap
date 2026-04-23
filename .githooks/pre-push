@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-make test
+./scripts/check-branch-name.sh
+./scripts/protect-branches.sh --allow-release
+make verify
