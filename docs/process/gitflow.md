@@ -21,6 +21,7 @@
 ## Enforcement
 
 - Branch names are validated by `scripts/check-branch-name.sh`.
+- Direct local commits and pushes from `main`, `master`, and `develop` are blocked by `scripts/protect-branches.sh`.
 - Local hooks run format, lint, docs, and test checks.
 - GitHub branch protections must require PRs and passing checks for `main` and `develop`.
 

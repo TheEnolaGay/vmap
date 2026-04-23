@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+./scripts/check-branch-name.sh
+./scripts/protect-branches.sh
 make fmt-check
 make lint
 make docs-check
